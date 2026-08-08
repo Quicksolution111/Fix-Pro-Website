@@ -1107,24 +1107,36 @@ ul { list-style: none; }
     border-bottom: 1px solid var(--border);
     padding: 16px 24px;
     gap: 4px;
+    z-index: 999;
   }
   .hamburger { display: flex; }
+  .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  .hamburger.open span:nth-child(2) { opacity: 0; }
+  .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+  .hero { padding: 90px 20px 40px; }
+  .hero-title { font-size: 2.4rem; }
+  .hero-visual { padding-top: 20px; }
+  .hero-img-card { max-width: 100%; border-radius: var(--radius); }
   .services-grid { grid-template-columns: 1fr; }
   .gallery-grid { grid-template-columns: 1fr; }
-  .gallery-item.large { grid-row: auto; }
+  .gallery-item.large { grid-row: auto; min-height: 250px; }
   .gallery-item.profile-card-item { aspect-ratio: 16/10; }
   .footer-top { grid-template-columns: 1fr; gap: 28px; }
   .contact-card { flex-direction: column; }
-  .hero-stats { flex-wrap: wrap; }
+  .hero-stats { flex-wrap: wrap; justify-content: center; gap: 15px; }
   .stat-divider { display: none; }
   .rate-card-grid { grid-template-columns: 1fr; }
 }
 @media (max-width: 480px) {
-  .hero { padding: 100px 16px 60px; }
+  .hero { padding: 90px 16px 50px; }
   .container { padding: 0 16px; }
-  .hero-title { font-size: 2.2rem; }
-  .section-title { font-size: 1.7rem; }
-  .catalogue-tabs { gap: 8px; }
-  .tab-btn { padding: 8px 14px; font-size: 0.83rem; }
+  .hero-title { font-size: 2rem; }
+  .section-title { font-size: 1.6rem; }
+  .catalogue-tabs { gap: 6px; }
+  .tab-btn { padding: 8px 12px; font-size: 0.8rem; }
   .hero-actions .btn { width: 100%; justify-content: center; }
+  .team-card { padding: 24px 16px; gap: 24px; }
+  .team-photo-border { width: 140px; height: 140px; }
+  .team-name { font-size: 1.4rem; }
+  .about-img { max-height: 350px; }
 }

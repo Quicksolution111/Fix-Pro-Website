@@ -91,7 +91,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 
 // ─── Catalogue tab from service card links ───────────────────────
-document.querySelectorAll('.service-link[href^="#"]').forEach(link => {
+document.querySelectorAll('.service-link[href^="#"], .skill-link[href^="#"]').forEach(link => {
   link.addEventListener('click', e => {
     const href = link.getAttribute('href').replace('#', '').replace('-details', '');
     const matchingTab = document.querySelector(`.tab-btn[data-tab="${href}"]`);

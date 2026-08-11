@@ -1209,3 +1209,34 @@ ul { list-style: none; }
   .about-img { max-height: 320px; }
   .section-header { margin-bottom: 40px; }
 }
+
+/* Sub Gallery Styles */
+.sub-gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 12px;
+  margin-top: 30px;
+}
+.sub-gallery-item {
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1px solid var(--border);
+  aspect-ratio: 1;
+}
+.sub-gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+.sub-gallery-item:hover img {
+  transform: scale(1.1);
+}
+.sub-gallery-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin: 40px 0 20px;
+  color: var(--primary);
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 10px;
+}

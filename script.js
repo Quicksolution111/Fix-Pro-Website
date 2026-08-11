@@ -148,3 +148,28 @@ document.addEventListener('DOMContentLoaded', () => {
     document.body.style.opacity = '1';
   });
 });
+
+// --- Image Modal (Lightbox) Logic --------------------------------
+const modal = document.getElementById('imageModal');
+const modalImg = document.getElementById('modalImage');
+const closeBtn = document.querySelector('.modal-close');
+
+if (modal && modalImg && closeBtn) {
+  document.querySelectorAll('.sub-gallery-item img').forEach(img => {
+    img.style.cursor = 'pointer';
+    img.addEventListener('click', function() {
+      modal.style.display = 'block';
+      modalImg.src = this.src;
+    });
+  });
+
+  closeBtn.addEventListener('click', () => {
+    modal.style.display = 'none';
+  });
+
+  modal.addEventListener('click', (e) => {
+    if (e.target === modal) {
+      modal.style.display = 'none';
+    }
+  });
+}

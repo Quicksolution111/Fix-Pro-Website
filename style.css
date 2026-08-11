@@ -1240,3 +1240,45 @@ ul { list-style: none; }
   border-bottom: 1px solid var(--border);
   padding-bottom: 10px;
 }
+/* ===================================
+   IMAGE MODAL
+   =================================== */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 10000;
+  padding-top: 60px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.9);
+  backdrop-filter: blur(5px);
+  animation: fadeIn 0.3s ease;
+}
+.modal-content {
+  margin: auto;
+  display: block;
+  max-width: 90%;
+  max-height: 85vh;
+  border-radius: var(--radius);
+  box-shadow: 0 10px 40px rgba(0,0,0,0.8);
+  object-fit: contain;
+}
+.modal-close {
+  position: absolute;
+  top: 20px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.modal-close:hover,
+.modal-close:focus {
+  color: var(--primary);
+  text-decoration: none;
+  cursor: pointer;
+}

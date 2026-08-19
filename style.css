@@ -1140,3 +1140,36 @@ ul { list-style: none; }
   .team-name { font-size: 1.4rem; }
   .about-img { max-height: 350px; }
 }
+
+/* ===================================
+   CUSTOM SVG ICONS
+   =================================== */
+.custom-icon {
+  width: 32px;
+  height: 32px;
+  display: block;
+  stroke: var(--text);
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  transition: transform 0.3s var(--transition), filter 0.3s var(--transition);
+  filter: drop-shadow(0 2px 8px var(--primary-glow));
+}
+
+.service-icon .custom-icon {
+  width: 42px;
+  height: 42px;
+  margin-bottom: 8px;
+}
+
+.rate-icon .custom-icon {
+  width: 30px;
+  height: 30px;
+}
+
+.rate-card:hover .custom-icon,
+.service-card:hover .custom-icon {
+  transform: translateY(-2px) scale(1.08);
+  filter: drop-shadow(0 4px 12px hsla(214, 90%, 52%, 0.4));
+}
+

@@ -155,11 +155,12 @@ const modalImg = document.getElementById('modalImage');
 const closeBtn = document.querySelector('.modal-close');
 
 if (modal && modalImg && closeBtn) {
-  document.querySelectorAll('.sub-gallery-item img').forEach(img => {
+  document.querySelectorAll('.sub-gallery-item img, .gallery-item:not(.profile-card-item) img').forEach(img => {
     img.style.cursor = 'pointer';
     img.addEventListener('click', function() {
       modal.style.display = 'block';
       modalImg.src = this.src;
+      modalImg.alt = this.alt || 'Project photo';
     });
   });
 
@@ -172,4 +173,11 @@ if (modal && modalImg && closeBtn) {
       modal.style.display = 'none';
     }
   });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && modal.style.display === 'block') {
+      modal.style.display = 'none';
+    }
+  });
 }
+
